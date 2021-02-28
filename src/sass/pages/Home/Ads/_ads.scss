@@ -1,0 +1,163 @@
+.ads {
+    background: url(#{$localhost}ads.jpg) no-repeat center center fixed;
+    background-size: cover;
+    @extend %padding100;
+    @include maxMobile {
+        padding-bottom: 150px;
+    }
+    margin-top: 100px;
+    @extend %p-relative;
+    z-index: 1;
+    .overlay {
+        @extend %p-absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .7);
+        z-index: -1;
+    }
+    .ads-content {
+        @extend %center-flex;
+        @include maxMobile {
+            margin-bottom: 60px;
+        }
+        > div {
+            span {
+                &.ads-save {
+                    @extend %block;
+                    margin-bottom: 15px;
+                    color: $flatblueCo1;
+                    font-size: $fontSize + 4;
+                }
+                &.ads-title {
+                    font-size: $fontSize + 44;
+                    @extend %f-bold;
+                    color: $flatFFF;
+                    margin-bottom: 15px;
+                    @include small {
+                        font-size: $fontSize + 14;
+                    }
+                    @include maxMobile {
+                        font-size: $fontSize + 14;
+                    }
+                }
+            }
+            .ads-desc {
+                font-size: $fontSize + 2;
+                margin-bottom: 50px;
+                color: $flatFFF;
+                @include opacity(.7);
+                @include small {
+                    font-size: $fontSize - 1;
+                }
+            }
+            .ads-button {
+                @extend %btn-shadow;
+                @include borderRadius(50px);
+                @extend %inline-block;
+                > button {
+                    @extend %button1;
+                    padding: 20px 50px;
+                    @include borderRadius(50px);
+                    @extend %overflow-h;
+                    @include maxMobile {
+                        padding: 15px 28px;
+                    }
+                }
+                transition: box-shadow $trans ease;
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .ads-image {
+        @extend %p-relative;
+        > div {
+            img {
+                @extend %block;
+                margin: auto;
+                @include borderRadius(20px);
+                @include maxMedium {
+                    display: inline;
+                    margin: 0;
+                    max-width: 100%;
+                }
+            }
+            &+ul {
+                @extend %linear-bg;
+                padding: 20px 20px 20px 50px;
+                color: $flatFFF;
+                @extend %p-absolute;
+                bottom: -70px;
+                right: 100px;
+                width: 50%;
+                margin: 0;
+                @include borderRadius(12px);
+                font-size: $fontSize + 2;
+                @include medium {
+                    width: 68%;
+                    right: 50px;
+                    bottom: 100px;
+                }
+                @include small {
+                    display: none;
+                }
+                @include maxMobile {
+                    width: 78%;
+                    right: 40px;
+                    bottom: -100px;
+                }
+                @media (max-width: 299px) {
+                    display: none;
+                }
+                li {
+                    margin-bottom: 5px;
+                    @extend %p-relative;
+                    &:after {
+                        content: '+';
+                        width: 20px;
+                        height: 20px;
+                        @include borderRadius(50%);
+                        background-color: $flatFFF;
+                        color: $flatblueCo5;
+                        @extend %p-absolute;
+                        top: 4px;
+                        left: -30px;
+                        @extend %f-bold;
+                        @extend %text-center;
+                        line-height: 18px;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+                &:after {
+                    content: '$300';
+                    @extend %p-absolute;
+                    top: -20px;
+                    right: 20px;
+                    background-color: $flat111;
+                    color: $flatFFF;
+                    padding: 6px 15px;
+                    @include borderRadius(10px);
+                    @extend %f-bold;
+                    font-size: $fontSize + 8;
+                }
+            }
+        }
+    }
+    &:after {
+        content: '';
+        @extend %p-absolute;
+        left: 0;
+        bottom: -44px;
+        width: 85%;
+        height: 45px;
+        @extend %linear-bg;
+        -webkit-clip-path: polygon(65% 0, 138% 0, 100% 0, 100% -1%, 77% 20%, 0 100%, 0 13%, 0 0%);
+        clip-path: polygon(65% 0, 138% 0, 100% 0, 100% -1%, 77% 20%, 0 100%, 0 13%, 0 0%);
+        z-index: -2;
+    }
+}

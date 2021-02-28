@@ -1,0 +1,19 @@
+// sass helpers like variables & extends
+@import "sass/helpers/var";
+@import "sass/helpers/mixins";
+@import "sass/helpers/extends";
+
+// components
+@import "sass/components/buttons";
+@import "sass/components/animation";
+@import "sass/components/progress";
+
+// layout of page
+@import "sass/layout/topNavbar";
+@import "sass/layout/navbar";
+
+// sections of home page
+@import "sass/pages/Home/home";
+
+// footer
+@import "sass/layout/footer";

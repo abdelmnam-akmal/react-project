@@ -1,0 +1,165 @@
+.navbar {
+    padding: 0;
+    z-index: 1;
+    background: transparent;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    @include maxMobile {
+        top: 0;
+    }
+    .container {
+        @include borderSolidB($flatleaden);
+        .navbar-brand {
+            @include maxSmall {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            @media (max-width: 299px) {
+                width: 100%;
+                margin: 0;
+            }
+            img {
+                @media (max-width: 299px) {
+                    width: 100%;
+                }
+            }
+        }
+        .navbar-toggler {
+            @include borderSolid($flatblueCo5);
+            background-color: transparent;
+            box-shadow: none;
+            padding-left: 5px;
+            padding-right: 5px;
+            @extend %trans;
+            span {
+                color: $flatblueCo5;
+                line-height: 30px;
+                @extend %trans;
+                i {
+                    @extend %trans;
+                }
+            }
+        }
+        .navbar-collapse {
+            @include maxSmall {
+                background-color: $flatblueCo7;
+            }
+            .navbar-nav {
+                @include maxSmall {
+                    margin-bottom: 0 !important;
+                }
+                .nav-item {
+                    .nav-link {
+                        padding: 40px 20px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $flatFFF;
+                        transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+                        position: relative;
+                        @include maxSmall {
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                        }
+                        @include medium {
+                            padding: 30px 15px;
+                        }
+                        &.active {
+                            @extend %color-linear;
+                            @include maxSmall {
+                                margin-left: 10px;
+                            }
+                        }
+                        &:visited {
+                            color: $flatFFF;
+                        }
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: auto;
+                            right: 0;
+                            bottom: 0;
+                            height: .5px;
+                            width: 0;
+                            transition: width .4s cubic-bezier(.25,.8,.25,1) 0s;
+                            @extend %linear-bg;
+                        }
+                        &:hover {
+                            @extend %color-linear;
+                            &:after {
+                                width: 100%;
+                                left: 0;
+                                right: auto;
+                            }
+                        }
+                    }
+                    &:last-of-type {
+                        margin-right: 25px;
+                        @include maxSmall {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .icon-desc {
+            margin-right: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            @extend %linear-bg;
+            position: relative;
+            overflow: hidden;
+            @extend %trans;
+            z-index: 2;
+            cursor: pointer;
+            @include medium {
+                padding: 12px 21px;
+            }
+            i {
+                font-size: 16px;
+                color: $flatFFF;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $flatFFF;
+                transform: scale(0);
+                border-radius: 50%;
+                @extend %trans;
+                z-index: -1;
+            }
+            &:hover {
+                i{
+                    color: $flatblack;
+                }
+                &:after {
+                    transform: scale(1);
+                }
+            }
+            &:last-of-type {
+                background-image: none;
+                background-color: $flatFFF;
+                i {
+                    color: $flatblack;
+                }
+                &:after {
+                    @extend %linear-bg;
+                    background-color: none;
+                }
+                &:hover {
+                    i {
+                        color: $flatFFF;
+                    }
+                }
+            }
+        }
+    }
+}

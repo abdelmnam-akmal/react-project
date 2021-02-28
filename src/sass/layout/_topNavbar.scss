@@ -1,0 +1,23 @@
+.top-navbar {
+    .top-mail, .top-call {
+        @extend %padding15;
+        > div {
+            i {
+                margin-right: 10px;
+                @extend %color-linear;
+            }
+        }
+    }
+    .top-social {
+        > div {
+            overflow: hidden;
+            > span {
+                @extend %buttonMove;
+            }
+            button {
+                @extend %button1;
+            }
+        }
+    }
+}
+

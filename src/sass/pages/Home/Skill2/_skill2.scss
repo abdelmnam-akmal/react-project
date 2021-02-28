@@ -1,0 +1,45 @@
+.skill-2 {
+    @extend %padding100;
+    .skill-2-content {
+        @extend %center-flex;
+        @include maxSmall {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        > div {
+            .skill-2-info {
+                @extend %color-linear;
+                font-size: $fontSize + 4;
+            }
+            .skill-2-title {
+                font-size: $fontSize + 29;
+                @extend %f-bold;
+                color: $flatblueCo7;
+                margin-top: 10px;
+                margin-bottom: 15px;
+                @include maxMobile {
+                    font-size: $fontSize + 19;
+                }
+            }
+            .skill-2-desc {
+                font-size: $fontSize + 2;
+                @include opacity(.8);
+            }
+            .skill-2-button {
+                margin-top: 60px;
+                button {
+                    @extend %button1;
+                    padding: 16px 45px;
+                    @extend %btn-shadow;
+                    @extend %overflow-h;
+                    @include borderRadius(50px);
+                    @extend %inline-block;
+                    transition: box-shadow $trans ease;
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}

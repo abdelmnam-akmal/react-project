@@ -1,0 +1,85 @@
+.studies {
+    @extend %padding100;
+    background: url(#{$localhost}studies.jpg) no-repeat center center fixed;
+    background-size: cover;
+    .header-studies {
+        span:first-of-type {
+            @extend %color-linear;
+            font-size: $fontSize + 4;
+        }
+        span:last-of-type {
+            @extend %f-bold;
+            font-size: $fontSize + 39;
+            color: $flatFFF;
+            margin-bottom: 55px;
+        }
+    }
+    .studies-sections {
+        margin-bottom: 10px;
+        padding-right: 0;
+        @include maxMobile {
+            padding-right: calc(var(--bs-gutter-x)/ 2);
+            padding-left: calc(var(--bs-gutter-x)/ 2);
+        }
+        > div {
+            @extend %overflow-h;
+            @extend %p-relative;
+            @include borderRadius(25px);
+            img {
+                @include borderRadius(25px);
+                @extend %width100;
+                height: auto;
+            }
+            .overlay {
+                @extend %absolute;
+                background-color: $flatFFF;
+                @include opacity(0);
+                @extend %trans;
+                .overlay-content {
+                    @extend %p-absolute;
+                    top: 50%;
+                    left: 0;
+                    @extend %width100;
+                    transform: translateY(-50%);
+                    @extend %text-center;
+                    z-index: 2;
+                    .plus-div {
+                        width: 60px;
+                        height: 60px;
+                        line-height: 57px;
+                        @include borderRadius(50%);
+                        font-size: $fontSize + 9;
+                        margin: auto;
+                        @extend %linear-bg;
+                        color: $flatFFF;
+                    }
+                    .studies-desc {
+                        font-size: $fontSize + 9;
+                        @extend %f-bold;
+                        margin-top: 40px;
+                        margin-bottom: 0;
+                        transition: margin .7s ease;
+                        &:hover {
+                            color: $flatblueCo7;
+                            cursor: pointer;
+                        }
+                    }
+                    span {
+                        margin-top: 0;
+                        @extend %text-center;
+                        @extend %block;
+                    }
+                }
+            }
+            &:hover {
+                .overlay {
+                    @include opacity(1);
+                    background-color: rgba($flatFFF, .6);
+                    .studies-desc {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

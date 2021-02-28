@@ -1,0 +1,61 @@
+// Colors
+$barColor: #364aeb;
+$overlayColor: #FFF;
+$backColor: #f6f6f6;
+
+.wrap {
+  @extend %center-flex;
+  @include maxMobile {
+    display: block;
+  }
+  .progress-radial {
+    @extend %center-flex;
+    margin-right: 50px;
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: $barColor; // default 100%
+    @include maxMobile {
+      margin: 0px auto 20px;
+    }
+    &:last-of-type {
+      margin-right: 0;
+      @include maxMobile {
+        margin: auto;
+      }
+    }
+    .overlay {
+      @extend %center-flex;
+      width: 80%;
+      height: 80%;
+      background-color: $overlayColor;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+
+$step: 5; // step of % for created classes
+
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+
+@for $i from 0 through $loops {
+  .progress-#{$i*$step} {
+    @if $i < $half {
+      $nextdeg: 90deg + ( $increment * $i );
+      background-image: linear-gradient(90deg, $backColor 50%, transparent 50%, transparent), linear-gradient($nextdeg, $barColor 50%, $backColor 50%, $backColor)
+    } @else {
+      $nextdeg: -90deg + ( $increment * ( $i - $half ) );
+      background-image: linear-gradient($nextdeg, $barColor 50%, transparent 50%, transparent), linear-gradient(270deg, $barColor 50%, $backColor 50%, $backColor)
+    }
+  }
+}

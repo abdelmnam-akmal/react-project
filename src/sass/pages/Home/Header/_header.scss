@@ -1,0 +1,107 @@
+.header {
+    background: url(#{$localhost}header.png) no-repeat center center;
+    background-size: cover;
+    @extend %p-relative;
+    @extend %padding100;
+    @extend %overflow-h;
+
+    padding-top: 160px;
+    @include maxSmall {
+        padding-top: 80px;
+    }
+    &:after {
+        content: '';
+        @extend %p-absolute;
+        left: 0;
+        bottom: 8px;
+        width: 85%;
+        height: 45px;
+        background: $flatblueCo6;
+        clip-path: polygon(65% 0, 138% 0, 100% 0, 100% -1%, 77% 20%, 0 100%, 0 13%, 0 0%);
+        z-index: -1;
+        @include maxSmall {
+            bottom: 14px;
+        }
+    }
+    .header-content {
+        .container-fluid {
+            .shapro-image {
+                padding-right: 0;
+            }
+            .shapro-text {
+                @extend %center-flex;
+                @include maxSmall {
+                    padding-top: 70px;
+                    margin-bottom: 40px;
+                }
+                > div {
+                    color: $flatFFF;
+                    @extend %width100;
+                    padding-left: 100px;
+                    @include maxSmall {
+                        padding-right: calc(var(--bs-gutter-x)/ 2);
+                        padding-left: calc(var(--bs-gutter-x)/ 2);
+                    }
+                    .header-info {
+                        @extend %linear-bg;
+                        padding: 10px 15px;
+                        @extend %f-bold;
+                        font-size: $fontSize - 2;
+                        letter-spacing: 2px;
+                        @include maxExtraMobile {
+                            display: block;
+                        }
+                    }
+                    .header-title {
+                        margin-top: 25px;
+                        font-size: $fontSize + 54;
+                        @extend %f-bold;
+                        letter-spacing: -3px;
+                        line-height: 1.1;
+                        margin-bottom: 10px;
+                        letter-spacing: 2px;
+                        @include maxExtraMobile {
+                            font-size: $fontSize + 14;
+                        }
+                    }
+                    .header-desc {
+                        margin-bottom: 50px;
+                        font-size: $fontSize + 4;
+                        @include opacity(.8);
+                        line-height: 1.4;
+                    }
+                    .button-header {
+                        @extend %inline-block;
+                        @extend %overflow-h;
+                        .btn-shapro {
+                            @extend %button1;
+                            padding: 20px 50px;
+                            @include borderRadius(50px);
+                            @extend %overflow-h;
+                        }
+                    }
+                }
+            }
+            .shapro-image {
+                @include maxSmall {
+                    right: -180px;
+                    position: relative;
+                }
+                @include maxExtraMobile {
+                    right: -20px;
+                }
+                > div {
+                    @extend %p-relative;
+                    img {
+                        @include maxSmall {
+                            max-width: 100%;
+                        }
+                    }
+                    button {
+                        @extend %button-animation;
+                    }
+                }
+            }
+        }
+    }
+}

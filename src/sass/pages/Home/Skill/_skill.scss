@@ -1,0 +1,63 @@
+.skill {
+    @extend %padding100;
+    @extend %p-relative;
+    &:after {
+        content: '';
+        @extend %p-absolute;
+        bottom: 0;
+        left: 50%;
+        width: 80%;
+        @extend %transform;
+        margin: auto;
+        border-top: 2px dashed $flatEC;
+    }
+    .skill-content {
+        @include maxSmall {
+            text-align: center;
+            margin-top: 30px;
+        }
+        > div {
+            .skill-info {
+                @extend %color-linear;
+                font-size: $fontSize + 4;
+            }
+            .skill-title {
+                font-size: $fontSize + 29;
+                @extend %f-bold;
+                color: $flatblueCo7;
+                margin-top: 10px;
+                margin-bottom: 15px;
+                @include maxMobile {
+                    font-size: $fontSize + 19;
+                }
+            }
+            .skill-desc {
+                font-size: $fontSize + 2;
+                @include opacity(.8);
+            }
+            .skill-wrapper {
+                margin-top: 30px;
+                margin-bottom: 60px;
+            }
+            .skill-button {
+                margin-top: 60px;
+                button {
+                    @extend %button1;
+                    margin-left: 15px;
+                    padding: 13px 35px;
+                    @extend %btn-shadow;
+                    @extend %overflow-h;
+                    @include borderRadius(50px);
+                    @extend %inline-block;
+                    transition: box-shadow $trans ease;
+                    @include maxMobile {
+                        margin-left: 0;
+                    }
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}

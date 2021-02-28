@@ -1,0 +1,150 @@
+.marketing {
+    background: url(#{$localhost}points.png) no-repeat center left;
+    padding-bottom: 100px;
+    .mark-images {
+        @extend %p-relative;
+        > div.top-right-image {
+            img {
+                margin-left: auto;
+                @extend %block;
+                @include maxMobile {
+                    margin: auto;
+                }
+            }
+        }
+        > div.bottom-left-image {
+            @extend %p-absolute;
+            bottom: -100px;
+            left: 30px;
+            @include medium {
+                left: 0;
+                bottom: -50px;
+            }
+            @include maxSmall {
+                left: 50px;
+            }
+            .overlay {
+                @extend %absolute;
+                @extend %center-flex;
+                @extend %linear-bg;
+                @include opacity(.6);
+                @include borderRadius(5px);
+                border-top-right-radius: 0;
+                z-index: 1;
+                button {
+                    @extend %button-animation;
+                    position: static;
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+    .mark-info {
+        background: url(#{$localhost}circle-1.png) no-repeat center right;
+        padding-top: 20px;
+        @include maxSmall {
+            margin-top: 100px;
+        }
+        @include medium {
+            padding-top: 0;
+        }
+        @include maxMobile {
+            margin-top: 0;
+        }
+        > div {
+            padding: 10px 30px;
+            @extend %p-relative;
+            @include medium {
+                padding: 10px;
+            }
+            .agency {
+                @extend %color-linear;
+                font-size: $fontSize + 4;
+            }
+            .mark-title {
+                margin-top: 15px;
+                color: $flatblueCo7;
+                font-size: $fontSize + 44;
+                @extend %f-bold;
+                line-height: 1;
+                @include maxExtraMobile {
+                    font-size: $fontSize + 14;
+                }
+            }
+            .mark-desc {
+                margin-top: 30px;
+                @include opacity(.8);
+                font-size: $fontSize + 4;
+                @include maxExtraMobile {
+                    margin-top: 10px;
+                }
+            }
+            .mark-popular {
+                @extend %center-flex;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                @include maxExtraMobile {
+                    display: block;
+                    margin-bottom: 15px;
+                    > div {
+                        margin-top: 15px;
+                    };
+                }
+                > div {
+                    .mark-sub {
+                        @extend %bounceBtn;
+                        &.m1 {
+                            &:after {
+                                background-color: $flatpoint2;
+                            }
+                        }
+                    }
+                    .mark-sub-text {
+                        @extend %f-bold;
+                    }
+                }
+            }
+            .mark-team {
+                .mark-sub {
+                    @extend %bounceBtn;
+                    &:after {
+                        background: $flatpoint3;
+                    }
+                }
+                .mark-sub-text {
+                    @extend %f-bold;
+                }
+            }
+            .mark-button {
+                @extend %p-absolute;
+                bottom: -100px;
+                left: 40px;
+                @include maxExtraMobile {
+                    position: static;
+                    margin-top: 40px;
+                }
+                > div {
+                    box-shadow: 4px 5px 32px 2px rgba(47, 84, 283, .46);
+                    @include borderRadius(50px);
+                    @include maxExtraMobile {
+                        box-shadow: none;
+                    }
+                    button {
+                        @extend %button1;
+                        @include borderRadius(50px);
+                        padding: 18px 50px;
+                        @extend %overflow-h;
+                        @include maxExtraMobile {
+                            padding: 15px 20px;
+                        }
+                    }
+                    transition: box-shadow $trans ease;
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}

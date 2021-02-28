@@ -1,0 +1,132 @@
+{
+    "socialMedia": {
+        "twitter": "fab fa-twitter",
+        "facebook": "fab fa-facebook-f",
+        "email": "far fa-envelope",
+        "call": "fas fa-phone-volume",
+        "pintrest": "fab fa-pinterest"
+    },
+    "specialTeam": [
+        {
+            "title": "Graphic Design",
+            "icon": "fas fa-map-marked-alt fa-fw",
+            "desc": "You can help customers in real-time across all of your channels from email, social, website, iOS, and Android."
+        },
+        {
+            "title": "UI/UX & Interaction",
+            "icon": "fas fa-globe-americas fa-fw",
+            "desc": "You can help customers in real-time across all of your channels from email, social, website, iOS, and Android."
+        },
+        {
+            "title": "Animation & Motion",
+            "icon": "fab fa-battle-net",
+            "desc": "You can help customers in real-time across all of your channels from email, social, website, iOS, and Android."
+        }
+    ],
+    "plan1": [
+        {
+            "icon": "far fa-file-code",
+            "title": "Customized Design",
+            "desc": "Every product must make a statement and we’re ready"
+        },
+        {
+            "icon": "fas fa-pen-nib",
+            "title": "Incomparable Design",
+            "desc": "Every product must make a statement and we’re ready"
+        } 
+    ],
+    "plan2": [
+        {
+            "icon": "far fa-window-restore",
+            "title": "Browser Compatibility",
+            "desc": "Every product must make a statement and we’re ready"
+        },
+        {
+            "icon": "fas fa-laptop-code",
+            "title": "Responsive Device",
+            "desc": "Every product must make a statement and we’re ready"
+        } 
+    ],
+    "studies": [
+        {
+            "image": "images/studies-1.jpg",
+            "title": "Dignissimos wisi cillum",
+            "desc": "Design, HTML"
+        },
+        {
+            "image": "images/studies-2.jpg",
+            "title": "Dignissimos wisi cillum",
+            "desc": "Design, HTML"
+        },
+        {
+            "image": "images/studies-3.jpg",
+            "title": "Dignissimos wisi cillum",
+            "desc": "Design, HTML"
+        },
+        {
+            "image": "images/studies-4.jpg",
+            "title": "Dignissimos wisi cillum",
+            "desc": "Design, HTML"
+        },
+        {
+            "image": "images/studies-5.jpg",
+            "title": "Dignissimos wisi cillum",
+            "desc": "Design, HTML"
+        },
+        {
+            "image": "images/studies-6.jpg",
+            "title": "Dignissimos wisi cillum",
+            "desc": "Design, HTML"
+        }
+    ],
+    "price": [
+        {
+            "image": "images/p1.jpg",
+            "priceInfo": "tv + internet",
+            "title": "Player Broadband",
+            "desc": "45+ channels (up to 50 in HD), Catch Up and Box Sets plus on TV (if you subscribe) 150+ channels",
+            "list": [
+                "Strategy & Research",
+                "Business & Finance Analysing",
+                "User interface design",
+                "Facebook ads marketing"
+            ],
+            "priceNumber": "$74",
+            "priceDate": "/mo"
+        },
+        {
+            "image": "images/p2.jpg",
+            "priceInfo": "maxient double play",
+            "title": "Player Bundle",
+            "desc": "45+ channels (up to 50 in HD), Catch Up and Box Sets plus on TV (if you subscribe) 150+ channels",
+            "list": [
+                "150+ channels",
+                "Lifetime free support",
+                "Upgrate options",
+                "Full access"
+            ],
+            "priceNumber": "$44",
+            "priceDate": "/mo"
+        },
+        {
+            "image": "images/p3.jpg",
+            "priceInfo": "tv + internet + phone",
+            "title": "TV Combo Bundle",
+            "desc": "45+ channels (up to 50 in HD), Catch Up and Box Sets plus on TV (if you subscribe) 150+ channels",
+            "list": [
+                "Made for 1-4 devices",
+                "Catch Up & On Demand",
+                "Made for 1-4 devices",
+                "Full access"
+            ],
+            "priceNumber": "$14",
+            "priceDate": "/mo"
+        }
+    ],
+    "shaproSocial": [
+        "fab fa-twitter",
+        "fab fa-facebook-f",
+        "far fa-envelope",
+        "fab fa-pinterest"
+    ]
+}

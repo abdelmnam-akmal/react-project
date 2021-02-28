@@ -1,0 +1,131 @@
+.plan {
+    padding-top: 200px;
+    padding-bottom: 140px;
+    .plan-sections {
+        > div {
+            @extend %p-relative;
+            &:after {
+                @extend %p-absolute;
+                right: 22px;
+                top: -80px;
+                background: url(#{$localhost}plan.png) no-repeat center center;
+                width: 747px;
+                height: 808px;
+                content: '';
+                animation: halfBounce2 4s infinite;
+                z-index: -1;
+                @include medium {
+                    right: -30px;
+                }
+                @include maxMobile {
+                    display: none;
+                }
+            }
+            .extra-plan {
+                > div {
+                    padding: 30px 40px;
+                    @include borderRadius(10px);
+                    width: 80%;
+                    box-shadow: 0px 1px 35px 0px rgba($flatblack, .08);
+                    @include maxMobile {
+                        width: 100%;
+                    }
+                    i {
+                        width: 55px;
+                        height: 55px;
+                        @extend %text-center;
+                        @include borderRadius(50%);
+                        @extend %inline-block;
+                        line-height: 55px;
+                        color: $flatpink;
+                        background-color: $flatwhite3;
+                        font-size: $fontSize + 6;
+                        margin-bottom: 15px;
+                        @extend %trans;
+                    }
+                    h4 {
+                        width: 50%;
+                        @extend %f-bold;
+                        @include maxMobile {
+                            width: 100%;
+                            overflow: hidden;
+                        }
+                    }
+                    &:first-of-type {
+                        margin-bottom: 25px;
+                        background-image: $gradientPlan1;
+                    }
+                    &:hover {
+                        i {
+                            animation: bounceIn 2s linear infinite alternate;
+                        }
+                    }
+                }
+                &:first-of-type {
+                    > div {
+                        margin-left: auto;
+                        @include maxMobile {
+                            margin-left: 0;
+                        }
+                        &:last-of-type {
+                            background-image: $gradientPlan2;
+                        }
+                    }
+                }
+                &:last-of-type {
+                    margin-top: 70px;
+                    @include maxMobile {
+                        margin-top: 30px;
+                    }
+                    > div {
+                        &:last-of-type {
+                            background-image: $gradientPlan3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .export-plan {
+        @extend %center-flex;
+        @include maxSmall {
+            margin-top: 80px;
+        }
+        > div {
+            .plan-info {
+                @extend %color-linear;
+                font-size: $fontSize + 4;
+            }
+            .plan-title {
+                @extend %f-bold;
+                color: $flatblueCo7;
+                margin-top: 12px;
+                margin-bottom: 15px;
+                font-size: 50px;
+                line-height: 1.2;
+                @include maxMobile {
+                    font-size: $fontSize + 14;
+                }
+            }
+            .plan-desc {
+                font-size: $fontSize + 2;
+                @include opacity(.8);
+            }
+            .plan-button {
+                margin-top: 60px;
+                button {
+                    @extend %button1;
+                    padding: 20px 50px;
+                    @extend %btn-shadow;
+                    @extend %overflow-h;
+                    @include borderRadius(50px);
+                    @extend %inline-block;
+                    transition: box-shadow $trans ease;
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+%padding15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+%padding100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+%width100 {
+    width: 100%;
+}
+%linear-bg {
+    background-image: $gradientLeft;
+}
+%linear-bgRight {
+    background-image: $gradientRight;
+}
+%trans {
+    transition: $trans;
+}
+%absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+%color-linear {
+    @extend %linear-bg;
+    background-clip: text;
+    color: transparent;
+}
+%text-center {
+    text-align: center;
+}
+%overflow-h {
+    overflow: hidden;
+}
+%btn-shadow {
+    box-shadow: 0px 4px 40px -9px $flatblueCo1;
+}
+%center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+%animationWave {
+    animation: waveBtn 2.5s infinite;
+}
+%button-animation {
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    @extend %linear-bg;
+    color: $flatFFF;
+    @extend %animationWave;
+    border: none;
+    @media (max-width: 575px) {
+        width: 70px;
+        height: 70px;
+    }
+    i {
+        font-size: 30px;
+        @media (max-width: 575px) {
+            font-size: 20px;
+        }
+    }
+}
+%bounceBtn {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: $flatwhite2;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    color: $flatdefaultCo;
+    font-size: 14px;
+    margin-right: 15px;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        right: 5px;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        background: $flatpoint1;
+        border-radius: 50%;
+        animation: halfBounce 2s infinite .3s;
+    }
+}
+%transform {
+    transform: translate(-50%);
+}
+%p-relative {
+    position: relative;
+}
+%p-absolute {
+    position: absolute;
+}
+%f-bold {
+    font-weight: bold;
+}
+%block {
+    display: block;
+}
+%inline-block {
+    display: inline-block;
+}
+%defaultBtn {
+    margin-top: 20px;
+    @extend %btn-shadow;
+    @extend %overflow-h;
+    @include borderRadius(50px);
+    @extend %inline-block;
+    button {
+        @extend %button1;
+        @extend %overflow-h;
+        @include borderRadius(50px);
+        @extend %f-bold;
+    }
+}

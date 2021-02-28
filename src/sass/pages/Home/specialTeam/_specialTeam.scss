@@ -1,0 +1,78 @@
+.special-team {
+    background: url(#{$localhost}specialteam.png) no-repeat center center;
+    @extend %padding100;
+    background-size: contain;
+    .special-header {
+        .special-title {
+            @extend %f-bold;
+        }
+        .special-desc {
+            @include opacity(.8);
+            margin-bottom: 50px;
+        }
+    }
+    .special-content {
+        margin-bottom: 30px;
+        > div {
+            @include borderSolid($flatwhite);
+            padding: 50px 70px;
+            @extend %trans;
+            @extend %p-relative;
+            z-index: 2;
+            @include maxExtraMobile {
+                padding: 40px 20px;
+            }
+            .header-info {
+                @extend %f-bold;
+                margin-bottom: 20px;
+            }
+            .icon-info {
+                font-size: $fontSize + 54;
+                @extend %color-linear;
+            }
+            .desc-info {
+                margin-top: 30px;
+                font-size: $fontSize + 3;
+                margin-bottom: 0;
+                @include opacity(.8);
+            }
+            .s-overlay {
+                @extend %p-absolute;
+                left: auto;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                z-index: -1;
+                width: 0;
+                transition: width .4s cubic-bezier(.25,.8,.25,1) 0s;
+                @extend %linear-bg;
+            }
+        }
+        &:hover {
+            color: $flatFFF;
+            border: none;
+            .icon-info {
+                background-image: none;
+                color: $flatFFF;
+            }
+            .s-overlay {
+                @extend %width100;
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+    .special-footer {
+        > p{
+            span {
+                text-decoration: underline;
+                @extend %trans;
+                cursor: pointer;
+                &:hover {
+                    @extend %color-linear;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

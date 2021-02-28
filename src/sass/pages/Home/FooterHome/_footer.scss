@@ -1,0 +1,93 @@
+.footer {
+    background-color: $flatblack4;
+    padding: 80px 0;
+    color: $flatFFF;
+    .footer-content {
+        @include maxMedium {
+            margin-bottom: 30px;
+        }
+        > div {
+            .footer-image {
+                margin-bottom: 25px;
+                &+p {
+                    @include opacity(.7);
+                    font-size: $fontSize + 2;
+                }
+            }
+            .shapro-list {
+                margin-top: 40px;
+                li {
+                    margin-right: 10px;
+                    i {
+                        font-size: $fontSize + 2;
+                        padding: 10px;
+                        @include borderRadius(50%);
+                        @extend %color-linear;
+                        cursor: pointer;
+                        @extend %trans;
+                        &:hover {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+            .twitter-stream,
+            .instagram,
+            .contact {
+                font-size: $fontSize + 14;
+                margin-bottom: 25px;
+                @extend %f-bold;
+                span {
+                    @extend %color-linear;
+                }
+            }
+            .p-twitter {
+                @extend %p-relative;
+                padding-left: 40px;
+                font-size: $fontSize + 3;
+                @include opacity(.7);
+                i {
+                    @extend %p-absolute;
+                    top: 2px;
+                    color: $twitterColor;
+                    font-size: $fontSize + 4;
+                    left: 0;
+                }
+            }
+            .list-instagram {
+                li {
+                    @extend %inline-block;
+                    margin: 4px;
+                    img {
+                        @include borderRadius(5px);
+                    }
+                }
+            }
+            .follow {
+                @extend %color-linear;
+                background-image: $gradientInsta;
+                font-size: $fontSize + 4;
+                cursor: pointer;
+            }
+            .list-contact {
+                li {
+                    font-size: $fontSize + 2;
+                    margin-bottom: 10px;
+                    span {
+                        @include opacity(.6);
+                        @extend %f-bold;
+                    }
+                }
+            }
+            .office {
+                @extend %f-bold;
+                font-size: $fontSize + 4;
+                margin-bottom: 0;
+                &+span {
+                    @include opacity(.6);
+                    font-size: $fontSize + 2;
+                }
+            }
+        }
+    }
+}

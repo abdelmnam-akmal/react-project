@@ -1,0 +1,82 @@
+.video-section {
+    background: url(#{$localhost}video.jpg) no-repeat center center;
+    background-size: cover;
+    @extend %padding100;
+    .video-content {
+        > div {
+            .btn-start {
+                width: 117px;
+                height: 117px;
+                border: 3px solid transparent;
+                box-shadow: none;
+                padding: 0;
+                @extend %p-relative;
+                @extend %animationWave;
+                @extend %inline-block;
+                @include borderRadius(100px);
+                background-image: $gradientButton, $gradientLeft;
+                background-origin: border-box;
+                background-clip: content-box, border-box;
+                margin-bottom: 32px;
+                i {
+                    height: 88px;
+                    width: 88px;
+                    background: rgba($flatFFF, .25);
+                    @include borderRadius(50%);
+                    @extend %text-center;
+                    line-height: 88px;
+                    color: $flatFFF;
+                    font-size: $fontSize + 14;
+                    @extend %p-absolute;
+                    z-index: 2;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    letter-spacing: -6px;
+                    @extend %trans;
+                    &:after {
+                        content: '';
+                        width: 0%;
+                        height: 0%;
+                        @extend %linear-bg;
+                        @extend %p-absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        z-index: -1;
+                        @include borderRadius(50%);
+                        @extend %trans;
+                    }
+                }
+                &:hover {
+                    i:after {
+                            width: 100%;
+                            height: 100%;
+                    }
+                }
+            }
+            .video-title {
+                font-weight: bold;
+                @extend %f-bold;
+                font-size: $fontSize + 24;
+                color: $flatFFF;
+            }
+            .video-desc {
+                font-size: $fontSize + 2;
+                color: $flatFFF;
+                @include opacity(.8);
+                margin-bottom: 30px;
+            }
+            .video-button {
+                @extend %defaultBtn;
+                button {
+                    padding: 18px 35px;
+                }
+            }
+        }
+    }
+}

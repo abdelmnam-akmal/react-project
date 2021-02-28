@@ -1,0 +1,89 @@
+// mixin about border
+@mixin borderSolid($borderColor) {
+    border: 1px solid $borderColor;
+}
+@mixin borderSolidT($borderColorT) {
+    border-top: 1px solid $borderColorT;
+}
+@mixin borderSolidR($borderColorR) {
+    border-right: 1px solid $borderColorR;
+}
+@mixin borderSolidB($borderColorB) {
+    border-bottom: 1px solid $borderColorB;
+}
+@mixin borderSolidL($borderColorL) {
+    border-left: 1px solid $borderColorL;
+}
+
+// mixin borderRadius
+@mixin borderRadius($value) {
+    border-radius: $value;
+}
+// mixin opacity
+@mixin opacity($value) {
+    opacity: $value;
+}
+
+// Mixin Media Querie
+// extra Mobile 
+@mixin maxExtraMobile {
+    @media #{$maxExtraMobile} {
+        @content;
+    }
+}
+@mixin minMobile {
+    @media #{$minMobile} {
+        @content;
+    }
+}
+
+// mobile Media
+@mixin maxMobile {
+    @media #{$maxMobile} {
+        @content;
+    }
+}
+
+// small screen Media min and max
+@mixin minSmall {
+    @media #{$minSmall} {
+        @content;
+    }
+}
+@mixin maxSmall {
+    @media #{$maxSmall} {
+        @content;
+    }
+}
+
+// Medium screen media min and max
+@mixin minMedium {
+    @media #{$minMedium} {
+        @content;
+    }
+}
+@mixin maxMedium {
+    @media #{$maxMedium} {
+        @content;
+    }
+}
+
+// large screen media
+@mixin minLarge {
+    @media #{$minLarge} {
+        @content;
+    }
+}
+
+// in Small
+@mixin small {
+    @media #{$minSmall} and #{$maxSmall} {
+        @content;
+    }
+}
+// in Medium 
+@mixin medium {
+    @media #{$minMedium} and #{$maxMedium} {
+        @content;
+    }
+}

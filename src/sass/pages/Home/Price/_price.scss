@@ -1,0 +1,163 @@
+.price {
+    @extend %padding100;
+    background-color: $flatpink3;
+    .price-header {
+        margin-bottom: 40px;
+        > span {
+            font-size: $fontSize + 4;
+            @extend %color-linear;
+        }
+        > div.h1 {
+            @extend %f-bold;
+            margin-bottom: 15px;
+            font-size: $fontSize + 39;
+            color: $flatblueCo7;
+        }
+        .price-button-toggler {
+            @extend %center-flex;
+            button {
+                margin-right: 15px;
+                margin-left: 15px;
+                @include borderRadius(20px);
+                width: 55px;
+                height: 24px;
+                background-color: $flatblueCo10;
+                border: none;
+                box-shadow: none;
+                @extend %p-relative;
+                @extend %center-flex;
+                @extend %trans;
+                span {
+                    @extend %p-absolute;
+                    left: 4px;
+                    width: 16px;
+                    height: 16px;
+                    @include borderRadius(50%);
+                    background-color: $flatFFF;
+                    @extend %trans;
+                }
+                span.move {
+                    left: calc(55px - 16px - 4px);
+                }
+            }
+        }
+    }
+    .price-content {
+        padding: 0;
+        margin-bottom: 30px;
+        &:last-of-type {
+            @include small {
+                margin: auto;
+            }
+        }
+        @include maxMedium {
+            padding-right: calc(var(--bs-gutter-x)/ 2);
+            padding-left: calc(var(--bs-gutter-x)/ 2);
+        }
+        @include maxExtraMobile {
+            padding-right: calc(var(--bs-gutter-x)/ 2);
+            padding-left: calc(var(--bs-gutter-x)/ 2);
+        }
+        > div {
+            width: min-content;
+            margin-left: auto;
+            background-image: $gradientPlan4;
+            padding-bottom: 40px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            @include medium {
+                width: 100%;
+            }
+            @include maxExtraMobile {
+                width: 100%;
+            }
+            @include maxMobile {
+                margin: auto;
+            }
+            .price-image {
+                img {
+                    border-radius: 10px;
+                    @include medium {
+                        width: 100%;
+                    }
+                    @include maxExtraMobile {
+                        width: 100%;
+                    }
+                }
+            }
+            &.direct1 {
+                margin: auto;
+                background-image: $gradientPlan2;
+            }
+            &.direct2 {
+                margin-right: auto;
+                margin-left: 0;
+                background-image: $gradientPlan1;
+                @include maxMobile {
+                    margin: auto;
+                }
+            }
+            .price-about {
+                padding: 30px 20px 0;
+                .price-title {
+                    @include borderSolidB($flatEC);
+                    padding-bottom: 30px;
+                    .price-info {
+                        color: $flatpink2;
+                        @extend %f-bold;
+                        font-size: $fontSize - 1;
+                    }
+                    .price-title2 {
+                        color: $flatblueCo7;
+                        margin-bottom: 12px;
+                        @extend %f-bold;
+                    }
+                    .price-desc {
+                        font-size: $fontSize + 1;
+                        @include opacity(.7);
+                        margin-bottom: 0;
+                    }
+                }
+                .price-list {
+                    padding-top: 30px;
+                    li {
+                        margin-bottom: 15px;
+                        font-size: $fontSize + 3;
+                        padding-left: 30px;
+                        @extend %p-relative;
+                        @include opacity(.7);
+                        i {
+                            @extend %p-absolute;
+                            top: 6px;
+                            left: 0;
+                            font-size: $fontSize  - 2;
+                            color: $flatpink2;
+                        }
+                    }
+                }
+                .price-number{
+                    > span {
+                        font-size: $fontSize + 44;
+                        color: $flatblueCo9;
+                        display: flex;
+                        @extend %f-bold;
+                        > span {
+                            @extend %p-relative;
+                            top: 5px;
+                            left: 0;
+                            font-size: $fontSize + 9;
+                            font-weight: normal;
+                        }
+                    }
+                    .price-button {
+                        @extend %defaultBtn;
+                        button {
+                            padding-right: 35px;
+                            padding-left: 35px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
