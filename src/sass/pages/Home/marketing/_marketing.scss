@@ -1,5 +1,5 @@
 .marketing {
-    background: url(#{$localhost}points.png) no-repeat center left;
+    background: url('images/points.png') no-repeat center left;
     padding-bottom: 100px;
     .mark-images {
         @extend %p-relative;
@@ -41,7 +41,7 @@
         }
     }
     .mark-info {
-        background: url(#{$localhost}circle-1.png) no-repeat center right;
+        background: url('images/circle-1.png') no-repeat center right;
         padding-top: 20px;
         @include maxSmall {
             margin-top: 100px;

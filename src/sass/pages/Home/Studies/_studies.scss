@@ -1,6 +1,6 @@
 .studies {
     @extend %padding100;
-    background: url(#{$localhost}studies.jpg) no-repeat center center fixed;
+    background: url('images/studies.jpg') no-repeat center center fixed;
     background-size: cover;
     .header-studies {
         span:first-of-type {

@@ -1,5 +1,5 @@
 .video-section {
-    background: url(#{$localhost}video.jpg) no-repeat center center;
+    background: url('images/video.jpg') no-repeat center center;
     background-size: cover;
     @extend %padding100;
     .video-content {

@@ -1,5 +1,5 @@
 .ads {
-    background: url(#{$localhost}ads.jpg) no-repeat center center fixed;
+    background: url('images/ads.jpg') no-repeat center center fixed;
     background-size: cover;
     @extend %padding100;
     @include maxMobile {

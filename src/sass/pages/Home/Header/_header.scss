@@ -1,10 +1,9 @@
 .header {
-    background: url(#{$localhost}header.png) no-repeat center center;
+    background: url('images/header.png') no-repeat center center;
     background-size: cover;
     @extend %p-relative;
     @extend %padding100;
     @extend %overflow-h;
-
     padding-top: 160px;
     @include maxSmall {
         padding-top: 80px;

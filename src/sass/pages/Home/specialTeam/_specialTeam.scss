@@ -1,5 +1,5 @@
 .special-team {
-    background: url(#{$localhost}specialteam.png) no-repeat center center;
+    background: url('images/specialteam.png') no-repeat center center;
     @extend %padding100;
     background-size: contain;
     .special-header {

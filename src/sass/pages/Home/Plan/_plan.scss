@@ -8,7 +8,7 @@
                 @extend %p-absolute;
                 right: 22px;
                 top: -80px;
-                background: url(#{$localhost}plan.png) no-repeat center center;
+                background: url('images/plan.png') no-repeat center center;
                 width: 747px;
                 height: 808px;
                 content: '';
