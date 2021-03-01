@@ -22,7 +22,7 @@ function Popup() {
                 <div className="row">
                     <div className="col-12 popup-video">
                         <div>
-                            <video src="media/video.mp4" id="video" className="video" controls onClick={stopHide}>
+                            <video src="" id="video" className="video" controls onClick={stopHide}>
                                 Your Browser Dosen't Support this video
                             </video>
                             <button className="video-button" onClick={closePopup}>

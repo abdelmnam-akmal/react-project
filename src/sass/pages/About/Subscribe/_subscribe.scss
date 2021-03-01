@@ -1,0 +1,110 @@
+.sub {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .sub-login {
+        @include maxMobile {
+            margin-bottom: 30px;
+        }
+        > div {
+            span {
+                margin-bottom: 20px;
+                @extend %f-bold;
+            }
+            div {
+                input {
+                    width: 60%;
+                    padding: 9px 12px;
+                    background-color: $flatEEE;
+                    border: none;
+                    outline: none;
+                    margin-right: 20px;
+                    @include maxMobile {
+                        margin-bottom: 10px;
+                    }
+                    @media (max-width: 299px) {
+                        width: 100%;
+                    }
+                }
+                button {
+                    @extend %linear-bg;
+                    padding: 12px 30px;
+                    @include borderRadius(50px);
+                    border: none;
+                    color: $flatFFF;
+                    @extend %f-bold;
+                    @extend %btn-shadow;
+                    transition: box-shadow $trans ease;
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+            p {
+                font-weight: lighter;
+                font-size: $fontSize;
+                margin-top: 10px;
+            }
+            .list-sub {
+                margin-top: 30px;
+                li {
+                    margin-right: 30px;
+                    i {
+                        @extend %color-linear;
+                        font-size: $fontSize + 8;
+                        cursor: pointer;
+                        @extend %trans;
+                        &:hover {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sub-text {
+        > div {
+            padding-right: 40px;
+            > span {
+                @extend %f-bold;
+                margin-bottom: 20px;
+            }
+            p {
+                span {
+                    text-decoration: underline;
+                }
+            }
+            div {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+                @include maxMobile {
+                    display: block;
+                }
+                div {
+                    @include maxMobile {
+                        display: inline-block;
+                    }
+                    margin-right: 20px;
+                    &:first-of-type {
+                        background-color: $flatblack;
+                        padding: 10px;
+                        @include borderRadius(3px);
+                    }
+                    &:last-of-type {
+                        background-color: $flatFFF;;
+                        padding: 10px;
+                        @include borderRadius(3px);
+                        @include borderSolid($flatEEE);
+                        @extend %trans;
+                        &:hover {
+                            @include borderSolid($flatblack);
+                        }
+                    }
+                    img {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

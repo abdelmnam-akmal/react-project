@@ -65,6 +65,7 @@ $flatblack: #000;
 $flatblack2: #111214;
 $flatblack3: #252525;
 $flatblack4: #151515;
+$flat1B: #1B1B1B;
 $twitterColor: #0081ff;
 // this points in the marketing div
 $flatpoint1: #FF006C;
@@ -82,6 +83,7 @@ $gradientPlan1: linear-gradient(to left top, $flatplan1, $flatplan2, $flatplan3,
 $gradientPlan2: linear-gradient(to left top, $flatplan6, $flatplan7, $flatplan8, $flatplan9, $flatFFF);
 $gradientPlan3: linear-gradient(to left top, $flatplan10, $flatplan11, $flatplan12, $flatplan13, $flatFFF);
 $gradientPlan4: linear-gradient(to top left, #fcf4d1, #fff1e0, #fff4f4, #fffaff, $flatFFF);
+$gradientAbout: linear-gradient(to right, #eb3252, #ef2f49, #f32c3f, #f62b34, #f82c28);
 
 // some variables like transition, sont-size
 $trans: .4s;

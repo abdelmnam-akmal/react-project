@@ -1,0 +1,26 @@
+footer {
+    background-color: $flatblack4;
+    padding: 30px 0;
+    font-size: $fontSize + 6;
+    color: $flatFFF;
+    @extend %p-relative;
+    &:after {
+        content: '';
+        @extend %p-absolute;
+        top: 0;
+        left: 50%;
+        @include borderSolidT($flatblack3);
+        @extend %transform;
+        width: 86%;
+    }
+    div {
+        span {
+            @include opacity(.7);
+        }
+        a {
+            text-decoration: none;
+            @extend %color-linear;
+            @extend %trans;
+        }
+    }
+}

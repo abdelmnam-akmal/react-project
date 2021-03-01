@@ -1,0 +1,31 @@
+.ratings {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $flat1B;
+    .ratings-content {
+        @include maxMobile {
+            margin-bottom: 30px;
+        }
+        > div {
+            display: flex;
+            align-items: center;
+            @include maxMobile {
+                justify-content: center;
+            }
+            i {
+                font-size: $fontSize + 35;
+                @extend %color-linear;
+                margin-right: 30px;
+            }
+            span {
+                font-size: $fontSize + 40px;
+                @extend %f-bold;
+                color: #fdf4b4;
+            }
+            h4 {
+                @extend %f-bold;
+                color: $flatFFF;
+            }
+        }
+    }
+}

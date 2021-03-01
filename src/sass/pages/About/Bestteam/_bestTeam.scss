@@ -1,0 +1,149 @@
+.best-team {
+    background: url('images/bestTeam.png') no-repeat center center fixed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .best-team-content {
+        @include maxSmall {
+            margin-bottom: 50px;
+        }
+        > div {
+            padding-top: 100px;
+            @include maxMobile {
+                padding-top: 10px;
+            }
+            span:first-child {
+                @extend %color-linear;
+                font-size: $fontSize + 4;
+            }
+            span:last-of-type {
+                font-size: $fontSize + 39;
+                @extend %f-bold;
+                color: $flatblueCo7;
+                @include maxMobile {
+                    font-size: $fontSize + 20;
+                }
+            }
+            p {
+                font-size: $fontSize + 4;
+                @include opacity(.7);
+                margin-top: 20px;
+                padding-right: 100px;
+                @include maxMobile {
+                    padding-right: 0;
+                }
+            }
+            .list-team {
+                margin-top: 40px;
+                li {
+                    @extend %f-bold;
+                    font-size: $fontSize + 2;
+                    padding-left: 80px;
+                    margin-bottom: 20px;
+                    padding-right: 100px;
+                    @extend %p-relative;
+                    @include maxMobile {
+                        padding-left: 70px;
+                        padding-right: 0;
+                    }
+                    i {
+                        @extend %p-absolute;
+                        top: 0;
+                        left: 0;
+                        width: 50px;
+                        height: 50px;
+                        @extend %text-center;
+                        @extend %linear-bg;
+                        color:$flatFFF;
+                        @include borderRadius(50%);
+                        line-height: 50px;
+                    }
+                }
+            }
+            .best-team-button {
+                margin-top: 60px;
+                button {
+                    @extend %button1;
+                    margin-left: 15px;
+                    @extend %btn-shadow;
+                    @extend %overflow-h;
+                    padding: 17px 50px;
+                    @include borderRadius(50px);
+                    @extend %inline-block;
+                    transition: box-shadow $trans ease;
+                    @include maxMobile {
+                        margin-left: 0;
+                    }
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+    .best-team-images {
+        padding: 0 ;
+        @include maxMobile {
+            padding-right: calc(var(--bs-gutter-x)/ 2);
+            padding-left: calc(var(--bs-gutter-x)/ 2);
+        }
+        .team-image-container {
+            padding: 0;
+            &:nth-child(odd) {
+                padding-right: 2px;
+                @include maxMobile {
+                    padding-right: calc(var(--bs-gutter-x)/ 2);
+                    padding-left: calc(var(--bs-gutter-x)/ 2);
+                }
+            }
+            &:nth-child(even) {
+                padding-left: 2px;
+                @include maxMobile {
+                    padding-right: calc(var(--bs-gutter-x)/ 2);
+                    padding-left: calc(var(--bs-gutter-x)/ 2);
+                }
+            }
+            &:first-of-type,
+            &:nth-of-type(2) {
+                margin-bottom: 4px;
+                @include maxMobile {
+                    padding-right: calc(var(--bs-gutter-x)/ 2);
+                    padding-left: calc(var(--bs-gutter-x)/ 2);
+                    margin-bottom: 10px;
+                }
+            }
+            @include maxMobile {
+                margin-bottom: 10px;
+            }
+            > div {
+                @extend %p-relative;
+                img {
+                    @extend %width100;
+                }
+                .team-overlay {
+                    @extend %absolute;
+                    @extend %center-flex;
+                    background-color: rgba($flatblueCo10, .5);
+                    color: $flatFFF;
+                    @extend %trans;
+                    @include opacity(0);
+                    div:first-child {
+                        @extend %trans;
+                        padding-right: 80px;
+                    }
+                    div:last-child {
+                        @extend %trans;
+                        padding-left: 80px;
+                    }
+                }
+                &:hover {
+                    .team-overlay {
+                        @include opacity(1);
+                        div {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

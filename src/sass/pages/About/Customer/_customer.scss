@@ -1,0 +1,38 @@
+.customer {
+    padding-top: 550px;
+    padding-bottom: 100px;
+    .customer-content {
+        padding-left: 50px;
+        @include maxSmall {
+            margin-bottom: 50px;
+        }
+        span {
+            font-weight: bold;
+            color: $flatblueCo7;
+        }
+        p {
+            @include opacity(.7);
+            margin-top: 20px;
+            font-size: $fontSize + 3;
+        }
+        .customer-button {
+            margin-top: 60px;
+            button {
+                @extend %button1;
+                margin-left: 15px;
+                @extend %btn-shadow;
+                @extend %overflow-h;
+                padding: 17px 50px;
+                @include borderRadius(50px);
+                @extend %inline-block;
+                transition: box-shadow $trans ease;
+                @include maxMobile {
+                    margin-left: 0;
+                }
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

@@ -9,7 +9,6 @@ import Skill from "./Skill/index";
 import Skill2 from "./Skill2/index";
 import Price from "./Price/index";
 import VideoSection from "./VideoSection/index";
-import FooterHome from "./Footer/index";
 
 function Home() {
     return (
@@ -24,7 +23,6 @@ function Home() {
             <Skill2 />
             <Price />
             <VideoSection />
-            <FooterHome />
         </>
     )
 }
