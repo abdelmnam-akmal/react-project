@@ -2,6 +2,19 @@ import React from "react";
 
 class Header extends React.Component {
 
+    showPopup = () => {
+        const popupId = document.getElementById('popup');
+        const videoId = document.getElementById('video');
+
+        if (true) {
+            popupId.classList.add('active');
+            videoId.setAttribute('src', 'media/video.mp4');
+            setInterval(()=> {
+                videoId.classList.add('selected');
+            }, 1000)
+        }
+    }
+
     render() {
         return (
             <div id="header" className="header">
@@ -31,7 +44,7 @@ class Header extends React.Component {
                             <div className="col-sm-12 col-md-12 col-lg-4 shapro-image">
                                 <div className="wow slideInRight" data-wow-delay=".5s">
                                     <img src="images/shapro.png" alt="shapro" />
-                                    <button>
+                                    <button onClick={this.showPopup}>
                                         <i className="fas fa-play"></i>
                                     </button>
                                 </div>

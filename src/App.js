@@ -12,15 +12,16 @@ import Contact from "./pages/Contact/index";
 import TopNavbar from "./pages/layout/Top-Navbar/index";
 import Navbar from "./pages/layout/Navbar/index";
 import Footer from "./pages/layout/Footer/index";
+import Popup from "./components/popup";
 // style
 import "./App.scss";
-
 
 function App() {
   return (
     <BrowserRouter>
       <TopNavbar />
       <Navbar />
+      <Popup />
       
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />

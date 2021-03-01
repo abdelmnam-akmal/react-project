@@ -1,11 +1,24 @@
 function VideoSection() {
+
+    function showPopup()  {
+        const popupId = document.getElementById('popup');
+        const videoId = document.getElementById('video');
+
+        if (true) {
+            popupId.classList.add('active');
+            setInterval(()=> {
+                videoId.classList.add('selected');
+            }, 1000)
+        }
+    }
+
     return (
         <div className="video-section">
             <div className="container">
                 <div className="row">
                     <div className="col-12 text-center video-content">
                         <div>
-                            <button className="btn-start">
+                            <button className="btn-start" onClick={showPopup}>
                                 <i className="fas fa-play"></i>
                             </button>
                             <span className="d-block h1 video-title">A user Friendly Theme,<br />

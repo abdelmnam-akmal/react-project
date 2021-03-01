@@ -1,0 +1,55 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($flat111, .8);
+    z-index: 9999999999;
+    @extend %center-flex;
+    transform: scale(0);
+    transition: .6 ease;
+    &.active {
+        transition: .6s ease;
+        transform: scale(1);
+    }
+    .popup-video {
+        > div {
+            @extend %center-flex;
+            > video {
+                border: none;
+                box-shadow: none;
+                outline: none;
+                transform: scale(0);
+                transition: .8 ease;
+                @include maxMobile {
+                    width: 100%;
+                }
+                &.selected {
+                    transform: scale(1);
+                    transition: .8 ease;
+                }
+            }
+            .video-button {
+                position: fixed;
+                top: 30px;
+                right: 40px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                box-shadow: none;
+                background: transparent;
+                border: 2px solid $flatEEE;
+                color: $flatEEE;
+                @extend %trans;
+                @include opacity(.7);
+                &:hover {
+                    color: $flatFFF;
+                    border: 2px solid $flatFFF;
+                    box-shadow: 0px 0px 18px -5px $flatFFF;
+                    @include opacity(1);
+                }
+            }
+        }
+    }
+}
