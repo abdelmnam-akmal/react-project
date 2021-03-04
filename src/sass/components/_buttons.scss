@@ -5,6 +5,7 @@
     color: $flatFFF;
     position: relative;
     z-index: 3;
+    outline: none;
     .s-overlay {
         @extend %absolute;
         width: 150%;
@@ -48,6 +49,7 @@
 }
 
 %buttonMove {
+    outline: none;
     padding: 14px 15px;
     @include borderSolidL($flatCCC);
     position: relative;

@@ -26,7 +26,7 @@ function Popup() {
                                 Your Browser Dosen't Support this video
                             </video>
                             <button className="video-button" onClick={closePopup}>
-                                <i className="fa fa-close"></i>
+                                <i className="fas fa-times"></i>
                             </button>
                         </div>
                     </div>

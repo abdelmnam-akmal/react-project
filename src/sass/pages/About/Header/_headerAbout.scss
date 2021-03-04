@@ -1,7 +1,6 @@
 .header-about {
     background: url('images/about.jpg') no-repeat center center;
     background-size: cover;
-    @extend %padding100;
     @extend %p-relative;
     padding-top: 250px;
     padding-bottom: 200px;

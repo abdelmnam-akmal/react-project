@@ -34,8 +34,8 @@ function Footer() {
                             <div className="twitter-stream">
                                 Twitter Stream<span>.</span>
                             </div>
-                            <p className="p-twitter">Would you like to know about our next theme? <br /> https://t.co/69YglbWtUw <i className="fa fa-twitter"></i></p>
-                            <p className="p-twitter">Recover WP updated to the version 1.3.4 <br /> https://t.co/PjMoihwZ <i className="fa fa-twitter"></i></p>
+                            <p className="p-twitter">Would you like to know about our next theme? <br /> https://t.co/69YglbWtUw <i className="fab fa-twitter"></i></p>
+                            <p className="p-twitter">Recover WP updated to the version 1.3.4 <br /> https://t.co/PjMoihwZ <i className="fab fa-twitter"></i></p>
                         </div>
                     </div>
                     <div className="col-md-6 col-lg-3 footer-content">
@@ -51,7 +51,7 @@ function Footer() {
                                 <li><LazyLoadImage src="images/instagram-5.jpg" alt="instagram image" /></li>
                                 <li><LazyLoadImage src="images/instagram-6.jpg" alt="instagram image" /></li>
                             </ul>
-                            <span className="follow"><i className="fa fa-instagram"></i> Follow</span>
+                            <span className="follow"><i className="fab fa-instagram"></i> Follow</span>
                         </div>
                     </div>
                     <div className="col-md-6 col-lg-3 footer-content">

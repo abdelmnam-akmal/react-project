@@ -128,5 +128,37 @@
         "fab fa-facebook-f",
         "far fa-envelope",
         "fab fa-pinterest"
+    ],
+    "services": [
+        {
+            "icon": "fas fa-laptop-code",
+            "title": "Product Research",
+            "desc": "Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor"
+        },
+        {
+            "icon": "fas fa-tags",
+            "title": "Marketing Idea",
+            "desc": "Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor"
+        },
+        {
+            "icon": "fas fa-university",
+            "title": "Advice & guides",
+            "desc": "Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor"
+        },
+        {
+            "icon": "fas fa-atlas",
+            "title": "Great Solutions",
+            "desc": "Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor"
+        },
+        {
+            "icon": "fas fa-briefcase",
+            "title": "SEO Monitoring",
+            "desc": "Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor"
+        },
+        {
+            "icon": "fas fa-laptop-code",
+            "title": "Your Competitors",
+            "desc": "Lorem ipsum dolor sit amecon sectetur adipisicing elit, sed do eiusmod tempor"
+        }
     ]
 }

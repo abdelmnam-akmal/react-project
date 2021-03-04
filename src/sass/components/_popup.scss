@@ -43,6 +43,7 @@
                 color: $flatEEE;
                 @extend %trans;
                 @include opacity(.7);
+                outline: none;
                 &:hover {
                     color: $flatFFF;
                     border: 2px solid $flatFFF;

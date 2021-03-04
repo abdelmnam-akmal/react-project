@@ -1,0 +1,100 @@
+.testi {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background: url('images/testi.jpg') no-repeat center center;
+    background-size: cover;
+    .testi-values {
+        > div {
+            display: flex;
+            .testi-toggler {
+                width: 22%;
+                li {
+                    padding: 10px 20px;
+                    margin-bottom: 2px;
+                    background-color: $flatTesti;
+                    color: $flatFFF;
+                    margin-right: 5px;
+                    @extend %f-bold;
+                    @extend %trans;
+                    cursor: pointer;
+                    &:first-of-type {
+                        border-top-left-radius: 10px;
+                    }
+                    &:last-of-type {
+                        border-bottom-left-radius: 10px;
+                    }
+                    &.active {
+                        @extend %trans;
+                        margin-right: 0;
+                        background-color: $flatFFF;
+                        color: $flatleaden;
+                    }
+                }
+            }
+            .testi-values-content {
+                width: 78%;
+                @extend %trans;
+                > div {
+                    padding: 20px 40px 50px;
+                    @include borderRadius(10px);
+                    border-top-left-radius: 0;
+                    background-color: $flatFFF;
+                    display: none;
+                    margin-left: 30px;
+                    @extend %trans;
+                    h4 {
+                        text-transform: capitalize;
+                        @extend %f-bold;
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: $fontSize + 2;
+                        margin-bottom: 30px;
+                        @include opacity(.7);
+                    }
+                    .shapro-list {
+                        margin-bottom: 40px;
+                        li {
+                            margin-right: 10px;
+                            i {
+                                font-size: $fontSize + 2;
+                                padding: 10px;
+                                @include borderRadius(50%);
+                                @extend %color-linear;
+                                cursor: pointer;
+                                @extend %trans;
+                                &:hover {
+                                    transform: rotate(360deg);
+                                }
+                            }
+                        }
+                    }
+                    .button-testi {
+                        @extend %btn-shadow;
+                        @include borderRadius(50px);
+                        @extend %inline-block;
+                        > button {
+                            @extend %button1;
+                            padding: 15px 45px;
+                            @include borderRadius(50px);
+                            @extend %overflow-h;
+                            @include maxMobile {
+                                padding: 15px 28px;
+                            }
+                        }
+                        transition: box-shadow $trans ease;
+                        &:hover {
+                            box-shadow: none;
+                        }
+                    }
+                    &.selected {
+                        @extend %trans;
+                        display: block;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

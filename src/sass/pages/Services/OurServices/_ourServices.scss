@@ -1,0 +1,144 @@
+.our-services {
+    @extend %padding100;
+    @extend %p-relative;
+    .ser-shape-1 {
+        @extend %p-absolute;
+        top: 15%;
+        left: 7%;
+        width: 30%;
+        animation: rotated 90s infinite linear;
+        z-index: -1;
+        img {
+            width: 100%;
+        }
+    }
+    .ser-shape-2 {
+        @extend %p-absolute;
+        bottom: 13%;
+        right: 7%;
+        width: 30%;
+        animation: rotated 90s infinite linear;
+        z-index: -1;
+        img {
+            width: 100%;
+        }
+    }
+    .services-header {
+        margin-bottom: 40px;
+        span:first-of-type {
+            @extend %color-linear;
+            font-size: $fontSize + 4;
+        }
+        span:last-of-type {
+            @extend %f-bold;
+            font-size: $fontSize + 39;
+            margin-bottom: 55px;
+            color: $flatblueCo7;
+        }
+    }
+    .services-content {
+        margin-bottom: 20px;
+        > div {
+            background-color: $flatFFF;
+            padding: 50px 60px;
+            @include borderRadius(15px);
+            box-shadow: 0px 0px 59px 0px rgba($flatEEE, .8);
+            .icon-services {
+                @include borderRadius(50%);
+                width: 140px;
+                height: 140px;
+                margin: auto;
+                @extend %center-flex;
+                background-image: $gradientPlan2;
+                i {
+                    font-size: $fontSize + 30;
+                    color: $flatpoint1;
+                }
+            }
+            h4 {
+                @extend %f-bold;
+                margin-top: 30px;
+            }
+            p {
+                font-size: $fontSize + 4;
+                @include opacity(.7);
+            }
+            &:hover {
+                i {
+                    animation: zoomIn .3s linear alternate;
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            > div {
+                .icon-services {
+                    background-image: $gradientPlan1;
+                    i {
+                        color: $flatdefaultCo;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(4) {
+            > div {
+                .icon-services {
+                    background-image: $gradientPlan3;
+                    i {
+                        color: $flatpoint2;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(5) {
+            > div {
+                .icon-services {
+                    background-image: $gradientPlan4;
+                    i {
+                        color: $twitterColor;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(6) {
+            > div {
+                .icon-services {
+                    background-image: $gradientPlan1;
+                    i {
+                        color: $flatdefaultCo;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(7) {
+            > div {
+                .icon-services {
+                    background-image: $gradientPlan2;
+                    i {
+                        color: $flatpoint1;
+                    }
+                }
+            }
+        }
+    }
+    .sec-get-started {
+        margin-top: 50px;
+        .services-button {
+            @extend %btn-shadow;
+            @include borderRadius(50px);
+            @extend %inline-block;
+            > button {
+                @extend %button1;
+                padding: 20px 50px;
+                @include borderRadius(50px);
+                @extend %overflow-h;
+                @include maxMobile {
+                    padding: 15px 28px;
+                }
+            }
+            transition: box-shadow $trans ease;
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+}

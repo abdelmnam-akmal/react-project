@@ -1,0 +1,26 @@
+.header-services {
+    background: url('images/services.jpg') no-repeat center center;
+    background-size: cover;
+    @extend %p-relative;
+    padding-top: 250px;
+    padding-bottom: 200px;
+    .overlay {
+        @extend %overlay;
+        z-index: 1;
+    }
+    .header-content {
+        color: $flatFFF;
+        z-index: 5;
+        @extend %text-center;
+        > div {
+            h1 {
+                @extend %f-bold;
+                font-size: $fontSize + 44;
+            }
+            span {
+                font-size: $fontSize + 4;
+                @extend %color-linear;
+            }
+        }
+    }
+}

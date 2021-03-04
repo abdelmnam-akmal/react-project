@@ -7,7 +7,7 @@ function HeaderAbout() {
                     <div className="col-12 header-content">
                         <div>
                             <h1>About Us</h1>
-                            <span>Home-About Page</span>
+                            <span>Home - About Page</span>
                         </div>
                     </div>
                     <div className="col-12 top-header-content">

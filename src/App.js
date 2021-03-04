@@ -11,7 +11,7 @@ import Contact from "./pages/Contact/index";
 // layout visible in all pages
 import TopNavbar from "./pages/layout/Top-Navbar/index";
 import Navbar from "./pages/layout/Navbar/index";
-import Footer from "./pages/layout/Footer/index"
+import Footer from "./pages/layout/Footer/index";
 import BottomFooter from "./pages/layout/BottomFooter/index";
 import Popup from "./components/popup";
 // style
