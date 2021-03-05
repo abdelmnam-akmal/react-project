@@ -1,0 +1,49 @@
+.blog-content {
+    @extend %padding100;
+    .blog-card {
+        margin-top: calc(var(--bs-gutter-x)/ 2);
+        margin-bottom: calc(var(--bs-gutter-x)/ 2);
+        > div {
+            .card {
+                border: none;
+                .card-reltive {
+                    @extend %p-relative;
+                    div {
+                        @extend %p-absolute;
+                        bottom: 20px;
+                        left: 20px;
+                        @extend %linear-bg;
+                        color: $flatFFF;
+                        padding: 10px 30px;
+                        @include borderRadius(20px);
+                        font-size: $fontSize - 2;
+                        @extend %f-bold;
+                    }
+                }
+                .card-body {
+                    .card-title {
+                        @extend %f-bold;
+                        cursor: pointer;
+                        @extend %trans;
+                        &:hover {
+                            color: $flatblueCo4;
+                        }
+                    }
+                    .card-text {
+                        font-size: $fontSize + 5;
+                        @include opacity(.8);
+                    }
+                    .button-blog {
+                        background-color: $flatEEE;
+                        padding: 15px 50px;
+                        @include borderRadius(50px);
+                        @extend %f-bold;
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}

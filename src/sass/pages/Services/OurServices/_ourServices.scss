@@ -11,6 +11,9 @@
         img {
             width: 100%;
         }
+        @include maxMobile {
+            display: none;
+        }
     }
     .ser-shape-2 {
         @extend %p-absolute;
@@ -22,18 +25,27 @@
         img {
             width: 100%;
         }
+        @include maxMobile {
+            display: none;
+        }
     }
     .services-header {
         margin-bottom: 40px;
         span:first-of-type {
             @extend %color-linear;
             font-size: $fontSize + 4;
+            @media (max-width: 299px) {
+                font-size: $fontSize;
+            }
         }
         span:last-of-type {
             @extend %f-bold;
             font-size: $fontSize + 39;
             margin-bottom: 55px;
             color: $flatblueCo7;
+            @media (max-width: 299px) {
+                font-size: $fontSize + 19;
+            }
         }
     }
     .services-content {

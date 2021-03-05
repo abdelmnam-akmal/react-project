@@ -16,6 +16,9 @@
             h1 {
                 @extend %f-bold;
                 font-size: $fontSize + 44;
+                @media (max-width: 299px) {
+                    font-size: $fontSize + 19;
+                }
             }
             span {
                 font-size: $fontSize + 4;

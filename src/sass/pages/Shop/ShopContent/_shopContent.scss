@@ -1,0 +1,74 @@
+.shop {
+    @extend %padding100;
+    .shop-header {
+        > div {
+            span:first-of-type {
+                color: $flatTesti;
+                @extend %f-bold;
+            }
+            span:last-of-type {
+                @extend %f-bold;
+                font-size: $fontSize + 35;
+                color: $flatblueCo7;
+                margin-top: 5px;
+            }
+        }
+    }
+    .shop-list-content {
+        @extend %center-flex;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @include maxMobile {
+            display: block;
+        }
+        li {
+            margin-right: 30px;
+            font-size: $fontSize + 3;
+            @extend %f-bold;
+            @extend %trans;
+            @include maxMobile {
+                margin-bottom: 15px;
+            }
+            cursor: pointer;
+            &.active {
+                color: $flatRed;
+            }
+            &:hover {
+                color: $flatRed;
+            }
+        }
+    }
+    .shop-content {
+        .shop-image {
+            margin-bottom: 20px;
+            > div {
+                @extend %p-relative;
+                // box-shadow: 0px 7px 23px -6px rgba($flatblack, .3);
+                img {
+                    width: 100%;
+                }
+                &:before {
+                    content: '$79.00';
+                    @extend %p-absolute;
+                    top: 25px;
+                    left: 25px;
+                    font-size: $fontSize + 15;
+                    color: $flatRed;
+                    @extend %f-bold;
+                }
+                &:after {
+                    content: 'Color lovers rebranding';
+                    @extend %p-absolute;
+                    bottom: 25px;
+                    left: 25px;
+                    font-size: $fontSize + 15;
+                    @extend %f-bold;
+                    cursor: pointer;
+                    @include maxMobile {
+                        font-size: $fontSize;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -6,8 +6,14 @@
     .testi-values {
         > div {
             display: flex;
+            @include maxMobile {
+                display: block;
+            }
             .testi-toggler {
                 width: 22%;
+                @include maxMobile {
+                    width: 100%;
+                }
                 li {
                     padding: 10px 20px;
                     margin-bottom: 2px;
@@ -17,11 +23,20 @@
                     @extend %f-bold;
                     @extend %trans;
                     cursor: pointer;
+                    @include maxMobile {
+                        margin-right: 0;
+                    }
                     &:first-of-type {
                         border-top-left-radius: 10px;
+                        @include maxMobile {
+                            border-top-right-radius: 10px;
+                        }
                     }
                     &:last-of-type {
                         border-bottom-left-radius: 10px;
+                        @include maxMobile {
+                            border-bottom-right-radius: 10px;
+                        }
                     }
                     &.active {
                         @extend %trans;
@@ -33,6 +48,9 @@
             }
             .testi-values-content {
                 width: 78%;
+                @include maxMobile {
+                    width: 100%;
+                }
                 @extend %trans;
                 > div {
                     padding: 20px 40px 50px;
