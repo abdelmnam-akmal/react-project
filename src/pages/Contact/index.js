@@ -1,5 +1,9 @@
 import React from "react";
 import HeaderServices from "../ServicesSec/HeaderServices/index";
+import MapContact from "./MapContact/index";
+import FormContact from "./FormContact/index";
+import FormInputs from "./FormInputs/index";
+import Subscribe from "../About/Subscribe/index";
 
 function Contact() {
 
@@ -12,6 +16,10 @@ function Contact() {
     return (
         <>
             <HeaderServices />
+            <MapContact />
+            <FormContact />
+            <FormInputs />
+            <Subscribe />
         </>
     )
 }

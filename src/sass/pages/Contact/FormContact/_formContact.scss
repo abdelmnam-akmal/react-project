@@ -1,0 +1,36 @@
+.form-contact {
+    @extend %padding100;
+    .form-address {
+        @include maxMobile {
+            margin-bottom: 30px;
+        }
+        > div {
+            @extend %p-relative;
+            box-shadow: 1px 1px 26px 4px $flatEEE;
+            padding: 40px;
+            @include borderRadius(10px);
+            h4 {
+                @extend %f-bold;
+            }
+            ul {
+                margin-bottom: 0;
+                li {
+                    color: $flatwhite4;
+                    font-size: $fontSize + 2;
+                }
+            }
+            i {
+                @extend %p-absolute;
+                top: -32px;
+                left: -18px;
+                font-size: $fontSize + 14;
+                width: 80px;
+                height: 80px;
+                @include borderRadius(50%);
+                background-color: $flatblueCo11;
+                @extend %center-flex;
+                color: $flatFFF;
+            }
+        }
+    }
+}
