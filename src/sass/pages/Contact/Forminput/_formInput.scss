@@ -26,7 +26,7 @@
                     }
                 }
                 textarea {
-                    width: 100%;
+                    @extend %width100;
                     padding: 20px 30px;
                     min-height: 250px;
                     @include borderSolid($flatwhite4);

@@ -43,9 +43,9 @@
             margin-bottom: 20px;
             > div {
                 @extend %p-relative;
-                // box-shadow: 0px 7px 23px -6px rgba($flatblack, .3);
+                box-shadow: 0px 7px 23px -6px rgba($flatblack, .3);
                 img {
-                    width: 100%;
+                    @extend %width100;
                 }
                 &:before {
                     content: '$79.00';
@@ -67,6 +67,14 @@
                     @include maxMobile {
                         font-size: $fontSize;
                     }
+                }
+            }
+        }
+        .shop-special {
+            > div {
+                height: 100%;
+                img {
+                    height: 100%;
                 }
             }
         }

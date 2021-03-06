@@ -6,7 +6,7 @@ function Popup() {
         const popupId = document.getElementById('popup');
         const videoId = document.getElementById('video');
         if (popupId.classList.contains('active') && videoId.classList.contains('selected')) {
-            console.log(videoId.setAttribute('src', ''));
+            videoId.setAttribute('src', '');
             popupId.classList.remove('active');
             videoId.classList.remove('selected');
         }

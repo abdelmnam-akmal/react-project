@@ -14,6 +14,7 @@ import Navbar from "./pages/layout/Navbar/index";
 import Footer from "./pages/layout/Footer/index";
 import BottomFooter from "./pages/layout/BottomFooter/index";
 import Popup from "./components/popup";
+import ButtonScroll from "./components/ButtonScrollToTop";
 // style
 import "./App.scss";
 
@@ -34,6 +35,7 @@ function App() {
 
       <Footer />
       <BottomFooter />
+      <ButtonScroll />
 
     </BrowserRouter>
   );

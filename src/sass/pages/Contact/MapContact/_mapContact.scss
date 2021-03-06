@@ -6,7 +6,7 @@
             > div {
                 height: 100%;
                 iframe {
-                    width: 100%;
+                    @extend %width100;
                     height: 100%;
                     border: none;
                 }

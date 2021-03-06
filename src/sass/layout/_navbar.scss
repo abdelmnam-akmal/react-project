@@ -2,7 +2,7 @@
     padding: 0;
     z-index: 1;
     background: transparent;
-    position: absolute;
+    @extend %p-absolute;
     top: 54px;
     left: 0;
     width: 100%;
@@ -54,11 +54,11 @@
                 .nav-item {
                     .nav-link {
                         padding: 40px 20px;
-                        font-size: 18px;
+                        font-size: $fontSize + 2;
                         font-weight: 700;
                         color: $flatFFF;
                         transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
-                        position: relative;
+                        @extend %p-relative;
                         @include maxSmall {
                             padding-top: 5px;
                             padding-bottom: 5px;
@@ -77,7 +77,7 @@
                         }
                         &:after {
                             content: '';
-                            position: absolute;
+                            @extend %p-absolute;
                             left: auto;
                             right: 0;
                             bottom: 0;
@@ -107,13 +107,11 @@
         .icon-desc {
             margin-right: 10px;
             padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
+            @extend %center-flex;
+            @include borderRadius(50%);
             @extend %linear-bg;
-            position: relative;
-            overflow: hidden;
+            @extend %p-relative;
+            @extend %overflow-h;
             @extend %trans;
             z-index: 2;
             cursor: pointer;
@@ -121,19 +119,15 @@
                 padding: 12px 21px;
             }
             i {
-                font-size: 16px;
+                font-size: $fontSize;
                 color: $flatFFF;
             }
             &:after {
                 content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
+                @extend %absolute;
                 background-color: $flatFFF;
                 transform: scale(0);
-                border-radius: 50%;
+                @include borderRadius(50%);
                 @extend %trans;
                 z-index: -1;
             }

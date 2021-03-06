@@ -9,7 +9,7 @@
         animation: rotated 90s infinite linear;
         z-index: -1;
         img {
-            width: 100%;
+            @extend %width100;
         }
         @include maxMobile {
             display: none;
@@ -23,7 +23,7 @@
         animation: rotated 90s infinite linear;
         z-index: -1;
         img {
-            width: 100%;
+            @extend %width100;
         }
         @include maxMobile {
             display: none;

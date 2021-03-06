@@ -24,7 +24,7 @@ function ShopContent() {
                     </div>
                     <div className="col-12 shop-content">
                         <div className="row">
-                            <div className="col-md-8 shop-image">
+                            <div className="col-md-8 shop-image shop-special">
                                 <div>
                                     <LazyLoadImage src="images/shop-1.jpg" alt="Blog" />
                                 </div>
@@ -39,12 +39,12 @@ function ShopContent() {
                                     <LazyLoadImage src="images/shop-3.jpg" alt="Blog" />
                                 </div>
                             </div>
-                            <div className="col-md-8 shop-image">
+                            <div className="col-md-8 shop-image shop-special">
                                 <div>
                                     <LazyLoadImage src="images/shop-4.jpg" alt="Blog" />
                                 </div>
                             </div>
-                            <div className="col-md-8 shop-image">
+                            <div className="col-md-8 shop-image shop-special">
                                 <div>
                                     <LazyLoadImage src="images/shop-5.jpg" alt="Blog" />
                                 </div>

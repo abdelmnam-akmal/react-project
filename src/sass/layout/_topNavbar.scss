@@ -10,7 +10,7 @@
     }
     .top-social {
         > div {
-            overflow: hidden;
+            @extend %overflow-h;
             > span {
                 @extend %buttonMove;
             }

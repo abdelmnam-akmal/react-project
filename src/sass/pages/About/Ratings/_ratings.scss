@@ -20,7 +20,7 @@
             span {
                 font-size: $fontSize + 40px;
                 @extend %f-bold;
-                color: #fdf4b4;
+                color: $flatwhite5;
             }
             h4 {
                 @extend %f-bold;
