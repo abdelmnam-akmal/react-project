@@ -9,6 +9,7 @@ import Blog from "./pages/Blog/index";
 import Shop from "./pages/Shop/index";
 import Contact from "./pages/Contact/index";
 // layout visible in all pages
+import Loader from "./components/loader";
 import TopNavbar from "./pages/layout/Top-Navbar/index";
 import Navbar from "./pages/layout/Navbar/index";
 import Footer from "./pages/layout/Footer/index";
@@ -21,6 +22,7 @@ import "./App.scss";
 function App() {
   return (
     <BrowserRouter>
+      <Loader />
       <TopNavbar />
       <Navbar />
       <Popup />

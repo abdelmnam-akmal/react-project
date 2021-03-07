@@ -1,0 +1,75 @@
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    @extend %width100;
+    height: 100%;
+    background: $flatblack5;
+    z-index: 999999999999999;
+    &.pre-hidden {
+        transition: opacity 1s ease;
+        @include opacity(0);
+        opacity: 0;
+    }
+    .circle{
+        @extend %p-relative;
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        top: 50%;
+        transform: translateY(-50%);
+        @include borderRadius(50%);
+        @extend %linear-bg;
+        .circle-inner{
+            @extend %p-relative;
+            top: 30px;
+            left: 30px;
+            width: 190px;
+            height: 190px;
+            @include borderRadius(50%);
+            background-color: $flatblack5;
+            animation: inneranim .5s ease-in-out alternate infinite;
+        }
+        .circle-cutter{
+            @extend %p-absolute;
+            left: 0px;
+            top: 0px;
+            width: 250px;
+            height: 250px;
+            @include borderRadius(50%);
+            transform-origin: top top;
+            animation: animrotate 1s ease-in-out alternate infinite;
+            &:after{
+                content: "";
+                @extend %p-absolute;
+                top: 125px;
+                left: -1px;
+                width: 252px;
+                height: 126px;
+                background-color: $flatblack5;
+            }
+        }
+        &:after{
+            content: "LOADING";
+            @extend %p-absolute;
+            top: 100px;
+            width: 250px;
+            @extend %color-linear;
+            @extend %text-center;
+            font-size: $fontSize + 14;
+            font-weight: 300;
+            letter-spacing: 5px;
+            line-height: 30px;
+            animation: fadeinout .5s ease-in-out alternate infinite;
+        }
+        &:before{
+            content: "";
+            @extend %p-absolute;
+            top: 125px;
+            left: -1px;
+            width: 252px;
+            height: 126px;
+            background-color: $flatblack5;
+        }
+    }
+}
